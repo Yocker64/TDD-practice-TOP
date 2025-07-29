@@ -1,29 +1,52 @@
 {
+  "name": "tdd-practice-top",
+  "version": "1.0.0",
+  "description": "Practice TDD",
+  "keywords": [
+    "tdd",
+    "testing",
+    "jest"
+  ],
+  "homepage": "https://github.com/Yocker64/TDD-practice-TOP#readme",
+  "bugs": {
+    "url": "https://github.com/Yocker64/TDD-practice-TOP/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yocker64/TDD-practice-TOP.git"
+  },
+  "license": "ISC",
+  "author": "yocker",
+  "type": "commonjs",
+  "main": "inde.js",
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "clean": "rm -rf dist/",
     "start-all": "npm-run-all clean build",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
+    "watch": "jest --watch *.js",
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack serve --config webpack.dev.js",
     "deploy": "git subtree push --prefix dist origin gh-pages"
   },
+  "dependencies": {
+    "modern-normalize": "^3.0.1"
+  },
   "devDependencies": {
+    "@babel/preset-env": "^7.28.0",
     "css-loader": "^7.1.2",
     "eslint-config-prettier": "^10.1.5",
     "eslint-config-wesbos": "^4.3.2",
     "eslint-plugin-prettier": "^5.4.0",
     "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.6.3",
+    "jest": "^30.0.5",
     "prettier": "^3.5.3",
     "style-loader": "^4.0.0",
     "webpack": "^5.99.6",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.1"
-  },
-  "dependencies": {
-    "modern-normalize": "^3.0.1"
   },
   "eslintConfig": {
     "extends": [
